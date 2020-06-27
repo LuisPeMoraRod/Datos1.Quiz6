@@ -41,9 +41,21 @@ print(tree.getMin()) #get mininum value of the tree
 print("\nMax. value:")
 print(tree.getMax()) #get the maximun value of the tree
 
+node = Node(10)
+print("\nDelete: "+str(node.nodeId))
+tree.delete(node) #delete node with ID 10 (one child)
+
+node = Node(9)
+print("\nDelete: "+str(node.nodeId))
+tree.delete(node) #delete node with ID 9 (no children)
+
 node = Node(8)
-print("\nTo delete: "+str(node.nodeId))
-tree.delete(node) #delete node with ID 8
+print("\nDelete: "+str(node.nodeId))
+tree.delete(node) #delete node with ID 8 (two children)
+
+node = Node(6)
+print("\nDelete: "+str(node.nodeId))
+tree.delete(node) #delete node with ID 6 (root)
 
 print("In order:")
 tree.printInOrder()
